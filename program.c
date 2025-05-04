@@ -7,7 +7,7 @@
 #include <time.h>
 
 long NUMBER_PROCESSORS;
-char* FILE_NAME = "devices.final.csv";
+char* FILE_NAME        = "devices.final.csv";
 char* OUTPUT_FILE_NAME = "output.devices.csv";
 
 #define MAX_LINE_SIZE 1024
@@ -750,7 +750,7 @@ void process_iot_data(int num_threads) {
 // Function to print results
 void print_results() {
   FILE* output_file = fopen(OUTPUT_FILE_NAME, "w");
-  fprintf(output_file, "idDevice;ano_mes;sensor;valor_max;valor_medio;valor_min\n");
+  fprintf(output_file, "device;ano_mes;sensor;valor_max;valor_medio;valor_min\n");
 
   printf("Total results: %d\n", result_count);
   printf("Device\tYear\tMonth\tSensor\tMin\tAvg\tMax\n");
@@ -769,7 +769,7 @@ void print_results() {
       default: sensor_name = "unknown"; break;
     }
     
-    fprintf(output_file, "%d;%d/%d;%s;%.2f;%.2f;%.2f\n", 
+    fprintf(output_file, "%01d;%d/%d;%s;%.2f;%.2f;%.2f\n", 
            r->idDevice, r->ano, r->mes, sensor_name, r->max, r->avg, r->min);
     printf("%d\t%d\t%d\t%s\t%.2f\t%.2f\t%.2f\n", 
            r->idDevice, r->ano, r->mes, sensor_name, r->min, r->avg, r->max);
