@@ -769,7 +769,7 @@ void print_results() {
       default: sensor_name = "unknown"; break;
     }
     
-    fprintf(output_file, "%01d;%d/%d;%s;%.2f;%.2f;%.2f\n", 
+    fprintf(output_file, "sirrosteste_UCS_AMV-%02d;%d/%d;%s;%.2f;%.2f;%.2f\n", 
            r->idDevice, r->ano, r->mes, sensor_name, r->max, r->avg, r->min);
     printf("%d\t%d\t%d\t%s\t%.2f\t%.2f\t%.2f\n", 
            r->idDevice, r->ano, r->mes, sensor_name, r->min, r->avg, r->max);
