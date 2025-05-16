@@ -3,7 +3,7 @@
 ### Instruções sobre sua compilação e execução.  
 - A compilação pode ser executada com o seguinte comando:
 
-		gcc  ./program.c  -g3  -O0  -o  ./program.o
+		gcc  ./program.c  -g3  -O0  -o -lpthread  ./program.o
 - A execução do programa para seu funcionamento correto deve haver o arquivo CSV de origem na pasta do programa com o nome `devices.final.csv`. Os dados antes de 2024/3 estão descartados nessa versão do arquivo.
 	https://drive.google.com/file/d/1ez0kVyrieUlRTLdf1KJktfWrSetorcCr/view?usp=sharing
 	
@@ -17,7 +17,7 @@
 - É identificado todas as combinações únicas de mês e ano nos dados
 - O número total de combinações de mês-ano é dividido entre as threads. Cada thread recebe um intervalo de índices em um array
 -  **Cálculo dos Valores Estatísticos**:
-    
+    - 	Dados parcialemtne invalidos que possuem data e dispositivo considerarão 0 como dado se não estiver preenchido.
     -   Para cada sensor, a thread percorre os dados do dispositivo e verifica se o registro pertence ao mês-ano atual.
     -   Durante a iteração:
         -   **Valor Mínimo**: Atualizado sempre que um valor menor é encontrado.
