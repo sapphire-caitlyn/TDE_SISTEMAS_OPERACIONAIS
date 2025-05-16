@@ -17,7 +17,7 @@
 - É identificado todas as combinações únicas de mês e ano nos dados
 - O número total de combinações de mês-ano é dividido entre as threads. Cada thread recebe um intervalo de índices em um array
 -  **Cálculo dos Valores Estatísticos**:
-    - 	Dados parcialemtne invalidos que possuem data e dispositivo considerarão 0 como dado se não estiver preenchido.
+    - 	Dados parcialmente invalidos que possuem data e dispositivo considerarão 0 como dado se não estiver preenchido.
     -   Para cada sensor, a thread percorre os dados do dispositivo e verifica se o registro pertence ao mês-ano atual.
     -   Durante a iteração:
         -   **Valor Mínimo**: Atualizado sempre que um valor menor é encontrado.
